@@ -3,7 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const { OAuth2Client } = require('google-auth-library');
-const User = require('./models/User'); // Import the User model
+const User = require('./models/user');
 const bcrypt = require('bcrypt')
 
 const app = express();
