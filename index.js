@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const axios = require("axios")
 const mongoose = require('mongoose');
 const cors = require('cors');
 const UserInfo = require('./models/user');
@@ -76,6 +77,7 @@ app.post('/login', async (req, res) => {
         res.status(500).send('Server error');
     }
 });
+
 
 // Start the server
 const PORT = process.env.PORT || 3000;

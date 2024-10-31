@@ -1,9 +1,23 @@
 {
     "version": 2,
     "builds": [
-        {"src":"index.js", "use": "@vercel/node"}
+        {
+            "src": "html/home.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "index.js",
+            "use": "@vercel/node"
+        }
     ],
-    "routes":[
-        {"src":"/(.*)", "dest":"index.js"}
+    "routes": [
+        {
+            "src": "/",
+            "dest": "/html/home.html"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "index.js"
+        }
     ]
 }
